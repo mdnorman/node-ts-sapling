@@ -26,7 +26,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "pretty-quick --staged",
+      "pre-commit": "prettier --ignore-unknown --write ${staged}",
       "pre-push": "npm run lint"
     }
   },
@@ -64,7 +64,7 @@
       "#"
     ],
     "scripts": {
-      "postchangelog": "npm run pretty"
+      "postchangelog": "npx prettier --write CHANGELOG.md"
     }
   }
 }
